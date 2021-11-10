@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>WalQRallly</title>
+    <meta name="description" content="WalQRallyアプリです">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/showMap-style.css">
+
+    <!--MapBox SDK-->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <!--マップ（前画面表示）-->
+    <div class="map-field-block">
+        <div id="map" class="map-field"></div>
+    </div>
+
+    <!--FAB-->
+    <div id="js-fab" class="fab-button">+</div>
+
+    <!--モーダル画面-->
+    <div id="js-modal" class="modal">
+        <p id="js-question">設問： 広島県はどこ？</p>
+        <p id="js-all">回答数： 20件</p>
+        <p id="js-correct">正解数： 10件</p>
+        <div id="js-answer-button" class="answer-button-block">
+            <p class="answer-button">クイズに回答する</p>
+        </div>
+        <div id="js-cancel-button" class="cancel-answer">×</div>
+
+    </div>
+
+    <!--オーバーレイ-->
+    <div id="js-overlay" class="overlay"></div>
+
+    <!--ポップアップ画面-->
+    <div id="js-popup" class="popup">
+        <div class="confirm-message-block">
+            <p class="confirm-message">クイズを出題しますか？</p>
+        </div>
+        <div class="confirm-button-block">
+            <div class="yes-button-block">
+                <p id="js-yes" class="button">出題する</p>
+            </div>
+            <div class="no-button-block">
+                <p id="js-no" class="button">しない</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/showMap-script.js"></script>
+
+</body>
+
+</html>

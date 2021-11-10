@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>WalQRallly</title>
+    <meta name="description" content="WalQRallyアプリです">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/uploadQuiz-style.css">
+
+    <!--MapBox SDK-->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet" />
+</head>
+
+<body>
+
+
+    <!--ロゴ-->
+    <div class="logo-field-block">
+        <img src="img/logo.PNG">
+    </div>
+
+    <!--改行-->
+    <div class="margin-bottom-midium"></div>
+
+    <!--MAP-->
+    <div class="map-field-blick">
+        <div id="map" class="map-field"></div>
+    </div>
+
+    <!--改行-->
+    <div class="margin-bottom-midium"></div>
+
+    <!--出題-->
+    <div class="question-block">
+
+        <!--白枠-->
+        <div class="question-field-block">
+
+            <!--設問文（タイトル）-->
+            <div class="area-block">
+
+                <!--アイコン-->
+                <div class="title-img">
+                    <img src="img/question.PNG">
+                </div>
+
+                <!--タイトル-->
+                <p class="title-text">Question</p>
+
+            </div>
+
+            <!--説明文（回答欄）-->
+            <div class="textbox-block">
+                <textarea id="js-textarea" maxlength="100" placeholder="設問を入力してください。" autofocus="true"></textarea>
+            </div>
+
+            <!--改行-->
+            <div class="margin-bottom-midium"></div>
+
+            <!--回答文（タイトル）-->
+            <div class="area-block">
+
+                <!--アイコン-->
+                <div class="title-img">
+                    <img src="img/answer.PNG">
+                </div>
+
+                <!--タイトル-->
+                <p class="title-text">Choices</p>
+
+            </div>
+
+            <!--回答1-->
+            <div>
+                <!--回答文（チェックボックス）-->
+                <div class="checkbox-block">
+                    <div id="js-checkbox1" class="checkbox-circle checkbox"></div>
+                </div>
+
+                <!--回答文（テキストフィールド）-->
+                <div class="answer-example">
+                    <input id="js-input1" class="checkbox" type="text" placeholder="設問を入力してください。">
+                </div>
+            </div>
+
+
+            <!--改行-->
+            <div class="margin-bottom-midium"></div>
+
+            <!--回答2-->
+            <div>
+                <!--回答文（チェックボックス）-->
+                <div class="checkbox-block">
+                    <div id="js-checkbox2" class="checkbox-circle checkbox"></div>
+                </div>
+
+                <!--回答文（テキストフィールド）-->
+                <div class="answer-example">
+                    <input id="js-input2" class="checkbox" type="text" placeholder="設問を入力してください。">
+                </div>
+            </div>
+
+            <!--改行-->
+            <div class="margin-bottom-midium"></div>
+
+            <!--回答3-->
+            <div>
+                <!--回答文（チェックボックス）-->
+                <div class="checkbox-block">
+                    <div id="js-checkbox3" class="checkbox-circle checkbox"></div>
+                </div>
+
+                <!--回答文（テキストフィールド）-->
+                <div class="answer-example">
+                    <input id="js-input3" class="checkbox" type="text" placeholder="設問を入力してください。">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--改行-->
+    <div class="margin-bottom-large"></div>
+
+
+    <!--出題ボタン-->
+    <div>
+        <div id="js-button" class="send-question-button-block">
+            <p class="send-question-button">クイズを出題する</p>
+        </div>
+    </div>
+
+    <!--オーバーレイ-->
+    <div id="js-overlay" class="overlay-block"></div>
+
+    <!--ポップアップ画面１-->
+    <div id="js-popup1" class="popup-block">
+        <div class="confirm-message-block">
+            <p class="confirm-sentence">この内容で出題しますか？</p>
+        </div>
+        <div class="confirm-botton-block">
+            <div id="js-yes" class="confirm-yes-block">
+                <p class="confirm-message">作成する</p>
+            </div>
+            <div id="js-no" class="confirm-no-block">
+                <p class="confirm-message">やめる</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!--ポップアップ画面２-->
+    <div id="js-popup2" class="popup-block">
+
+        <div class="thanks-message-block">
+            <p class="thanks-sentence">作成してくれて<br>ありがとう</p>
+        </div>
+
+        <div class="thanks-img-block">
+            <img src="img/thanks.PNG">
+        </div>
+
+        <div id="js-back-button" class="back-button-block">
+            <p class="back-button">マップに戻る</p>
+        </div>
+
+    </div>
+
+
+
+    <script src="js/uploadQuiz-script.js"></script>
+
+</body>
+
+</html>
